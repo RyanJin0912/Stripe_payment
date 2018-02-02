@@ -2,7 +2,7 @@
 @section('content')
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
-            <h1>SignUp</h1>
+            <h1>SignIn</h1>
 
             @if(count($errors) > 0)
                 <div class="alert alert-danger">

@@ -23,7 +23,7 @@ class UserController extends Controller
 
         $user = new User([
             'email'=>$request->input('email'),
-            'password'=>$request->input('password')
+            'password'=>bcrypt($request->input('password'))
         ]);// Enter the email and password by User
 
 
@@ -32,7 +32,7 @@ class UserController extends Controller
                 Auth::login($user);
 
 
-            return redirect()->route('user.profile');
+            return redirect()->route('product.index');
     }
     //1.postSignup($request redirect()->route('product.index'))註冊後回到product.index
     //2.Auth(user)使用者認證後到profile()
@@ -52,7 +52,7 @@ class UserController extends Controller
         ]);
 
 
-        if(Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('email')]))
+        if(Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password')]))
         {
                     return redirect()->route('user.profile');
         }//user.profile

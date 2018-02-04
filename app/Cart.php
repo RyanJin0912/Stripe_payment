@@ -40,6 +40,7 @@ class Cart
                         'price'=>$item->price,
                         'item'=>$item
                     ];
+                    //products databases
 
 
                         if($this->items)

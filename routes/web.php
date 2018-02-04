@@ -20,7 +20,7 @@ Route::get('/', [
     'uses' => 'ProductController@getIndex',
     'as' => 'product.index'
 ]);
-
+//index
 
 Route::get('/add-to-cart/{id}',[
         'uses'=>'ProductController@getAddToCart',
@@ -29,6 +29,27 @@ Route::get('/add-to-cart/{id}',[
 
 
 
+
+Route::get('/shopping-cart',[
+    'uses'=>'ProductController@getCart',
+    'as'=>'product.shoppingcart'
+]);//shoppingcart
+
+
+
+
+Route::get('/checkout',[
+    'uses'=>'ProductController@getCheckout',
+    'as'=>'checkout'
+]);
+//checkout
+
+
+Route::post('/checkout',[
+    'uses'=>'ProductController@postCheckout',
+    'as'=>'checkout'
+]);
+//checkout
 
 Route::group(['prefix'=>'user'],function(){
 

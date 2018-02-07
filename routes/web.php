@@ -98,6 +98,7 @@ Route::group(['prefix'=>'user'],function(){
 
 
 
-});//group()
+});
+//group(   Guest, Auth)
 
 

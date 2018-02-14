@@ -34,9 +34,8 @@ Route::get('/shopping-cart',[
     'uses'=>'ProductController@getCart',
     'as'=>'product.shoppingcart'
 ]);//shoppingcart
-
-
-
+//
+//
 
 Route::get('/checkout',[
     'uses'=>'ProductController@getCheckout',
@@ -50,6 +49,9 @@ Route::post('/checkout',[
     'as'=>'checkout'
 ]);
 //checkout
+
+
+
 
 Route::group(['prefix'=>'user'],function(){
 
